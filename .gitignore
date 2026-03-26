@@ -30,3 +30,36 @@ go.work.sum
 # Editor/IDE
 # .idea/
 # .vscode/
+
+/.air.toml
+/.vscode
+.idea/
+/web/node_modules
+/web/dist
+/tmp
+/log
+/docs
+.DS_Store
+
+gin_rbac_api
+
+# local env files
+.env.local
+.env.*.local
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Editor directories and files
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+config.yaml
+__debug_bin

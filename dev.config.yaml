@@ -1,0 +1,55 @@
+# production
+system:
+  port: 8888
+  mode: dev
+  use-multipoint: true
+  
+# jwt configuration
+jwt:
+  signing-key: gin_rbac_api
+  expires-time: 7d
+  buffer-time: 1d
+  issuer: cocpop
+
+# zap logger configuration
+zap:
+  level: debug
+  format: console
+  prefix: "[gin_rbac_api]"
+  director: log
+  outputPaths: ["stdout", "/log"]
+  show-line: true
+  encode-level: LowercaseColorLevelEncoder
+  stacktrace-key: stacktrace
+  log-in-console: true
+
+# captcha configuration
+captcha:
+  key-long: 6
+  img-width: 240
+  img-height: 80
+
+# redis configuration
+redis:
+  db: 0
+  addr: localhost:6379
+  password: ""
+
+# pgsql configuration
+pgsql:
+  path: "192.168.5.38"
+  port: "5432"
+  config: ""
+  db-name: "gin_rbac"
+  username: "yepin_dev"
+  password: "yepin_dev_2023"
+  max-idle-conns: 10
+  max-open-conns: 100
+  log-mode: "debug"
+  log-zap: false
+  PreferSimpleProtocol: true
+# mongodb configuration
+mongo:
+  host: "127.0.0.1"
+  port: "27017"
+  db: "mdb"
